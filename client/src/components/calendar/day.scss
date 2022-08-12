@@ -23,14 +23,23 @@
       color: white;
       // border: 1px solid white;
     }
-    .contestList {
+    .list {
       background-color: transparent;
-      display: flex;
-      justify-content: center;      
-      font-size: small;
-    }    
+      color: white;
+      .contestsul {
+        width: 100%;
+        // background-color: $codechef;
+        list-style: none;
+        padding: 0;
+        overflow: scroll;
+        scrollbar-width: 0;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
   }
 }
-.lessOpacity{
+.lessOpacity {
   opacity: 70%;
 }

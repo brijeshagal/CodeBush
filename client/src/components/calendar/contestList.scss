@@ -1,0 +1,34 @@
+@import '../../global.scss';
+
+.codechefbg{  
+  .contestList{
+    color: white;
+    font-size: 12px;
+    overflow: scroll;
+    scrollbar-width: 0;
+    background-color: $codechef;
+    &::-webkit-scrollbar{
+      display: none;
+    }  
+  }
+  .inactive{
+    display: none;
+  }
+}
+.codeforcesbg{
+  
+  .contestList{
+    background-color: $codeforces;
+    color: white;    
+    font-size: 12px;
+    overflow: scroll;
+    scrollbar-width: 0;
+    &::-webkit-scrollbar{
+      display: none;
+    }  
+  }
+  .inactive{
+    display: none;
+  } 
+}
+
