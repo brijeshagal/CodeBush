@@ -1,6 +1,6 @@
 import React from "react";
 import "./contestList.scss";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import "../../global.scss";
 const ContestList = ({
   contest,
@@ -15,9 +15,9 @@ const ContestList = ({
   console.log(name === 1);
   return (
     <span className={id === 1 ? "codechefbg" : ((id === 2) ? "codeforcesbg" : "default")}>
-      <li className={dateVal == day.format() ? "contestList" : "inactive"}>
-        <span>{time}</span>
-        <span> {day.format()} </span>
+      <li className={dateVal === day.format() ? "contestList" : "inactive"}>
+        <span className="data">{time}</span>
+        <span className="data"> {contest} </span>
       </li>
     </span>
   );

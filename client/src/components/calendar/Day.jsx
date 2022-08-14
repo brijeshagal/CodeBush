@@ -11,53 +11,50 @@ const Day = ({ day, rowIdx }) => {
   const list = [
     {
       id: 1,
-      contest: "Cook-Off",
+      contest: "Codechef Cook-Off Rated for Div 3 & 4",
       time: "20:00-23:00",
       dateVal: "2022-08-13T00:00:00+05:30",
       rated: true,
-      registered: false,      
+      registered: false,
     },
     {
       id: 2,
       platform: "codeforces",
-      contest: "Div 2 800",
+      contest: "Codeforces Div 2 800 Educational Round",
       time: "20:00-23:00",
       dateVal: "2022-08-14T00:00:00+05:30",
       rated: true,
       registered: false,
-    }
-  ];      
+    },
+  ];
   return (
     <div
       className={
         month === day.get("month") ? "dateCell" : "dateCell lessOpacity"
       }
     >
-      <header>
-        <div
-          className={
-            today === day.get("date") ? "today dateHeader" : "dateHeader"
-          }
-        >
-          {day.get("date")}
-
-        </div>
-        <div className="list">
-          <ul className="contestsul">          
+      <div
+        className={
+          today === day.get("date") ? "today dateHeader" : "dateHeader"
+        }
+      >
+        {day.get("date")}
+      </div>
+      <div className="list">
+        <ul className="contestsul">
           {list.map((item) => (
             <ContestList
-            contest={item.contest}
-            rated={item.rated}
-            registered={item.registered}
-            time={item.time}
-            id={item.id}
-            dateVal={item.dateVal}
-            day = {day}
-            />            
+              contest={item.contest}
+              rated={item.rated}
+              registered={item.registered}
+              time={item.time}
+              id={item.id}
+              dateVal={item.dateVal}
+              day={day}
+            />
           ))}
-          </ul>
-        </div>
-      </header>
+        </ul>
+      </div>
     </div>
   );
 };

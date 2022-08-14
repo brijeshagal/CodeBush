@@ -4,12 +4,20 @@
   .contestList{
     color: white;
     font-size: 12px;
+    
+    // overflow: scroll;
+    white-space: nowrap;     
     overflow: scroll;
+    // text-overflow: ellipsis; 
     scrollbar-width: 0;
+    // width: 100;
     background-color: $codechef;
     &::-webkit-scrollbar{
       display: none;
     }  
+    // .data{
+    //   width: 100%;
+    // }
   }
   .inactive{
     display: none;
@@ -18,14 +26,22 @@
 .codeforcesbg{
   
   .contestList{
+    // position: relative;
     background-color: $codeforces;
     color: white;    
     font-size: 12px;
+    // width: 100%;
     overflow: scroll;
+    white-space: nowrap;     
+    // overflow: hidden;
+    // text-overflow: ellipsis; 
     scrollbar-width: 0;
     &::-webkit-scrollbar{
       display: none;
     }  
+    // .data{
+    //   width: 100%;
+    // }
   }
   .inactive{
     display: none;
