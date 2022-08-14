@@ -15,8 +15,7 @@ const Month = ({ month }) => {
           </div>
         ))}
       </div>
-      {month.map((row, i) => (
-        // <React.Fragment key={i}>
+      {month.map((row, i) => (        
         <div className="row">
           {row.map((day, idx) => (
             <div className="week">
