@@ -1,10 +1,12 @@
 @import '../../global.scss';
 
 .codechefbg{  
+  text-align: left;  
   .contestList{
     color: white;
     font-size: 12px;
-    
+    height: 14px; 
+    // display: inline-block;
     // overflow: scroll;
     white-space: nowrap;     
     overflow: scroll;
@@ -15,36 +17,51 @@
     &::-webkit-scrollbar{
       display: none;
     }  
-    // .data{
-    //   width: 100%;
-    // }
+    .data{
+      width: 100%; 
+      a{
+        color: white;
+        text-decoration: none;
+      }      
+    }
+    @media (max-width: 210px){
+      display: none;
+    }
   }
   .inactive{
     display: none;
   }
 }
-.codeforcesbg{
-  
+.codeforcesbg{ 
+  text-align: left;  
   .contestList{
-    // position: relative;
-    background-color: $codeforces;
-    color: white;    
+    color: white;
     font-size: 12px;
-    // width: 100%;
-    overflow: scroll;
+    height: 14px; 
+    // display: inline-block;
+    // overflow: scroll;
     white-space: nowrap;     
-    // overflow: hidden;
+    overflow: scroll;
     // text-overflow: ellipsis; 
     scrollbar-width: 0;
+    // width: 100;
+    background-color: $codeforces;
     &::-webkit-scrollbar{
       display: none;
     }  
-    // .data{
-    //   width: 100%;
-    // }
+    .data{
+      width: 100%;
+      a{
+        color: white;
+        text-decoration: none;
+      }      
+    }
+    @media (max-width: 210px){
+      display: none;
+    }
   }
   .inactive{
     display: none;
-  } 
+  }
 }
 
