@@ -15,6 +15,7 @@ const Navbar = () => {
     }
     return (
         <div className={isScrolled ? "navbar scrolled" : "navbar"}>
+          
             <div className="container">
                 <div className="left">
                     <img src={Logo} alt="CodeBush" />
@@ -44,4 +45,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;

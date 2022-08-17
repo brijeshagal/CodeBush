@@ -1,14 +1,11 @@
 import React from "react";
-import "./day.scss";
+import "./shortDay.scss";
 import dayjs from "dayjs";
-import ContestList from "./ContestList";
-// import {useEffect} from "react";
+import ShortContestList from "./ShortContestList";
 
-const Day = ({ day }) => {
+const ShortDay = ({ day }) => {
   let now = dayjs();
-  let today = now.format("DD/MM/YYYY");
-  let month = now.format("MM");
-  // console.log(month === day.format("MM"));
+  let today = now.format("DD/MM/YYYY");  
   const list = [
     {
       id: 1,
@@ -28,23 +25,23 @@ const Day = ({ day }) => {
       registered: false,
     },
   ];
+
+  const generateClass = (today) => {
+    if (today === day.format("DD/MM/YYYY")) {
+      return "shortDay todayShortDay";
+    } else {
+      return "shortDay";
+    }
+  };
+
   return (
-    <div
-      className={
-        month === day.format("MM") ? "dateCell" : "dateCell lessOpacity"
-      }
-    >
-      <div
-        className={
-          (today === day.format("DD/MM/YYYY")) ? "dateHeader today" : "dateHeader"
-        }
-      >
-        {day.format("DD")}
-      </div>
-      <div className="list">
-        <ul className="contestsul">
+    <div className={generateClass(today)}>
+      
+      <div className="listShortDay">
+      <div className={"dateHeader"}>{day.format("DD")}</div>
+        <div className="contestsdiv">
           {list.map((item) => (
-            <ContestList
+            <ShortContestList
               contest={item.contest}
               rated={item.rated}
               registered={item.registered}
@@ -54,10 +51,10 @@ const Day = ({ day }) => {
               day={day}
             />
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Day;
+export default ShortDay;
