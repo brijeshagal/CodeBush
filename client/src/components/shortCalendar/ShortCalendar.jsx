@@ -1,42 +1,28 @@
 import React from "react";
 import dayjs from "dayjs";
 import "./shortCalendar.scss";
-import weekday from "dayjs/plugin/weekday.js";
-import Day from "../calendar/Day";
-dayjs.extend(weekday);
+import ShortDay from "./ShortDay";  
 
-function ShortCalendar({ month }) {
+function ShortCalendar() {  
   let now = dayjs();
-  let today = now.date();
-  // console.log(now.weekday(-1));
-  // console.log(now.weekday(-1).format("ddd DD MMM"));
-  // const allDays = [];
+  let previousDay = now.subtract(1, 'day');
+  let nextDay = now.add(1, 'day');  
   return (
     <div className="shortCalendar">
       <div className="past">
-
-          <Day day={now.weekday(-1)} key = {(now.weekday(-1).format("DD")%5)} />
- 
+        <ShortDay day={previousDay.subtract(1, 'day')} />
+      </div>
+      <div className="past">
+        <ShortDay day={previousDay} />
       </div>
       <div className="today">
-
-          <Day day={now.weekday(0)} key = {(now.weekday(0).format("DD")%5)}/>
-      
+        <ShortDay day={now} />
       </div>
       <div className="next">
-     
-          <Day day={now.weekday(1)} key = {(now.weekday(1).format("DD")%5)}/>
-     
+        <ShortDay day={nextDay} />
       </div>
       <div className="next">
-    
-          <Day day={now.weekday(2)} key = {(now.weekday(2).format("DD")%5)}/>
-  
-      </div>
-      <div className="next">
-   
-          <Day day={now.weekday(3)} key = {(now.weekday(3).format("DD")%5)}/>
-  
+        <ShortDay day={nextDay.add(1, 'day')} />
       </div>
     </div>
   );

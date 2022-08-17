@@ -1,37 +1,29 @@
 @import "../../global.scss";
 
 .shortCalendar {
-  position: relative;
-  top: 100px;
-  left: 200px;
+  position: absolute;
+  top: 80vh;
+  right: 10vw;
   display: flex;
-  height: 100px;
-  width: 400px;
-  background-color: $palleteGrey;
+  height: 10%;
+  width: 30%; 
+  gap: 3px; 
+  // border-radius: 5px; 
+  // background-color: $palleteGrey;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   .past {
-    height: 80%;
-    width: 18%;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: auto 0;
+    height: 100%;
+    width: 20%;
   }
-  .today {
-    height: 80%;
-    width: 18%;
-    border-radius: 5px;
-    border: 2px solid black;
-    margin: auto 0;    
-    transform: translateY(-10%);    
+  .today {    
+    height: 100%;
+    width: 20%;
+    transform: translateY(-5px);  
   }
   .next {
-    height: 80%;
-    width: 18%;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: auto 0;
+    height: 100%;
+    width: 20%;
   }
 }
 .inactive {
