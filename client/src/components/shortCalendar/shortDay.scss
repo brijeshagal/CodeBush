@@ -2,13 +2,13 @@
 
 .shortDay {
   // border: 1px solid rgb(72, 72, 211);
-  width: 100%;  
-  height: 100%;  
+  width: 100%;
+  height: 100%;
   background-color: $palleteBlue;
   border-radius: 10px;
   overflow: hidden;
-   
-  .listShortDay {    
+
+  .listShortDay {
     color: white;
     width: 100%;
     height: 100%;
@@ -18,20 +18,22 @@
     .contestsdiv {
       height: 100%;
       width: 100%;
-      display:flex;
+      display: flex;
       overflow: hidden;
     }
-    .dateHeader {     
+    .dateHeader {
       color: white;
-      position: absolute;
       font-size: 20px;
-      z-index: 88;    
-      top: 40%;  
-      left: 38%;  
-    } 
+      z-index: 88;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
-.todayShortDay {    
-  background-color: #0f73b6;  
+.todayShortDay {
+  background-color: #0f73b6;
 }
 

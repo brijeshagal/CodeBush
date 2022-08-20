@@ -5,16 +5,15 @@ import Calendar from "./pages/calendar/Calendar";
 import Navbar from "./components/navbar/Navbar";
 import ShortCalendar from "./components/shortCalendar/ShortCalendar";
 import "./App.scss";
-function App({getMonth}) {  
-  return (
-    // const [currentMonth, setCurrentMonth] = useState(getMonth());
+import ContextWrapper from "./pages/calendar/context/ContextWrapper";
+
+function App() {
+  return (    
     <div className="app">
       <Navbar />
-      {/* <Calendar/> */}
-      <ShortCalendar/>
-      {/* <ShortCalendar month = {getMonth}/> */}
-      {/* <Calendar/> */}
-      {/* <Home/> */}
+      <ContextWrapper>
+        <Calendar />
+      </ContextWrapper>
     </div>
   );
 }

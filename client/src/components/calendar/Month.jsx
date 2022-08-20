@@ -1,26 +1,25 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Day from "./Day";
 import "./month.scss";
 import dayjs from "dayjs";
 
-const Month = ({ month }) => {
-  let now = dayjs();
+import GlobalContext from "../../pages/calendar/context/GlobalContext";
+
+const Month = ({ month }) => {  
+
   return (
-    <div className="month">
-      <div className="monthName">{now.format("MMMM").toUpperCase()}</div>
+    <div className="month">      
       <div className="weekHead">
         {month[0].map((day) => (
-          <div className="week">
-            {day.format("ddd").toUpperCase()}
-          </div>
+          <div className="week">{day.format("ddd").toUpperCase()}</div>
         ))}
       </div>
-      {month.map((row) => (        
+      {month.map((row) => (
         <div className="row">
           {row.map((day, idx) => (
             <div className="week">
               <div className="dayCell">
-                <Day day={day} key={idx}/>
+                <Day day={day} key={idx} />
               </div>
             </div>
           ))}
