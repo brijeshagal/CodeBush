@@ -10,14 +10,11 @@ const ContestList = ({
   registered,
   day,
   dateVal,
-}) => {
-  let name = id;
-  console.log(name === 1);
+}) => {    
   return (
     <span className={id === 1 ? "codechefbg" : ((id === 2) ? "codeforcesbg" : "default")}>
-      <li className={dateVal === day.format() ? "contestList" : "inactive"}>
-        <span className="data">{time}</span>
-        <span className="data"> {contest} </span>
+      <li className={dateVal === day.format("DD/MM/YYYY") ? "contestList" : "inactive"}>
+        <span className="data"> {time} <a href = "">{contest}</a></span>
       </li>
     </span>
   );
