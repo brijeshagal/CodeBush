@@ -1,10 +1,15 @@
 import React from 'react';
+import CreateEventButton from './CreateEventButton';
+import SmallCalendar from './SmallCalendar';
+import "./sidebar.scss";
 
 const Sidebar = () => {
+
   return (
-    <div>
-      
-    </div>
+    <aside className='sidebar'>
+      <CreateEventButton/>
+      {/* <SmallCalendar/> */}
+    </aside>
   );
 }
 

@@ -17,9 +17,13 @@ const Calendar = () => {
 
   return (
     <div className="calendar">
-      <CalendarHeader />
-      <Sidebar />
-      <Month month={currentMonth} />
+      <div className="calendarSidebar">
+        <Sidebar />
+      </div>
+      <div className="calendarMonth">
+        <CalendarHeader />
+        <Month month={currentMonth} />
+      </div>
     </div>
   );
 };
